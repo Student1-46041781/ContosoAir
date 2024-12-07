@@ -15,7 +15,7 @@ resources:
       include:
        - master
 pool:
-  default
+  vmImage: ubuntu-latest
 
 steps:
 - task: DownloadPipelineArtifact@2
