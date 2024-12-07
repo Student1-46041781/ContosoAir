@@ -14,10 +14,11 @@ resources:
      branches:
       include:
        - master
-pool:
-  vmImage: ubuntu-latest
-
+pool: default
 steps:
+- task: NodeTool@0
+  inputs:
+   versionSpec: '14.x'
 - task: DownloadPipelineArtifact@2
   inputs:
     buildType: 'specific'
